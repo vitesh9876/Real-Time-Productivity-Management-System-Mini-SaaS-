@@ -26,30 +26,32 @@ const Login = () => {
 
   return (
     <div className="max-w-md mx-auto mt-20">
-      <div className="glass p-8 rounded-2xl shadow-xl">
-        <h2 className="text-3xl font-bold mb-6 text-center">Welcome Back</h2>
-        {isError && <div className="bg-red-500/10 border border-red-500 text-red-500 p-3 rounded mb-4">{message}</div>}
-        <form onSubmit={onSubmit} className="space-y-4">
+      <div className="glass p-10 rounded-3xl shadow-2xl shadow-indigo-100 border border-white">
+        <h2 className="text-4xl font-black mb-8 text-center text-slate-900 tracking-tight">Welcome Back</h2>
+        {isError && <div className="bg-red-50 border border-red-200 text-red-600 p-4 rounded-xl mb-6 text-sm font-medium">{message}</div>}
+        <form onSubmit={onSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-slate-400 mb-1">Email</label>
+            <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Email Address</label>
             <input 
               type="email" name="email" value={email} onChange={onChange} required
-              className="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-500 transition text-white"
+              placeholder="name@company.com"
+              className="w-full bg-white border-2 border-slate-100 rounded-2xl px-5 py-3.5 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 transition-all text-slate-900 placeholder:text-slate-300 shadow-sm"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-400 mb-1">Password</label>
+            <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Password</label>
             <input 
               type="password" name="password" value={password} onChange={onChange} required
-              className="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:border-indigo-500 transition text-white"
+              placeholder="••••••••"
+              className="w-full bg-white border-2 border-slate-100 rounded-2xl px-5 py-3.5 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-50 transition-all text-slate-900 placeholder:text-slate-300 shadow-sm"
             />
           </div>
-          <button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 rounded-lg transition">
-            Login
+          <button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl transition-all shadow-xl shadow-indigo-200 active:scale-95">
+            Sign In
           </button>
         </form>
-        <p className="mt-4 text-center text-sm text-slate-400">
-          Don't have an account? <Link to="/register" className="text-indigo-400 hover:underline">Register</Link>
+        <p className="mt-8 text-center text-sm font-medium text-slate-500">
+          New here? <Link to="/register" className="text-indigo-600 hover:text-indigo-700 font-bold underline underline-offset-4 decoration-2">Create an account</Link>
         </p>
       </div>
     </div>
