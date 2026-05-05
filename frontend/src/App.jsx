@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Navbar from './components/Navbar';
 import { taskAdded, taskUpdated, taskDeleted } from './store/taskSlice';
 
-const SOCKET_URL = 'http://localhost:5000';
+const SOCKET_URL = 'https://real-time-productivity-management-system-3q09.onrender.com';
 
 function App() {
   const dispatch = useDispatch();
